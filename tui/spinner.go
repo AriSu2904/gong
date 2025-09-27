@@ -31,7 +31,7 @@ func RunSpinner(statusText string, task func() error) error {
 
 	finalModel, err := p.Run()
 	if err != nil {
-		return fmt.Errorf("gagal menjalankan TUI: %w", err)
+		return fmt.Errorf("failed running tui: %w", err)
 	}
 
 	if m, ok := finalModel.(model); ok && m.err != nil {
